@@ -25,7 +25,7 @@ document.querySelectorAll('.base h5.card-title').forEach((el)=> {
   });
 
 /*вариант 2 нахождения всех заголовков внутри базового уровня*/
-let base = document.querySelector('section.base');
+const base = document.querySelector('section.base');
 
 /*Обрезать строку до 20 символов, и в конце вывести "..." (три точки). */
 (()=>{
