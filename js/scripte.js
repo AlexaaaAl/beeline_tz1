@@ -20,7 +20,7 @@ $mainmenu.fadeOut().delay(500).fadeIn();
 
 /*Преобразовать каждую строку в верхний регистр.
 1 вариант нахождения всех заголовков внутри базового уровня*/
-document.querySelectorAll('.base h5.card-title').forEach(function(el) {
+document.querySelectorAll('.base h5.card-title').forEach((el)=> {
     el.innerHTML =  el.innerHTML.toUpperCase();
   });
 
@@ -28,9 +28,9 @@ document.querySelectorAll('.base h5.card-title').forEach(function(el) {
 let base = document.querySelector('section.base');
 
 /*Обрезать строку до 20 символов, и в конце вывести "..." (три точки). */
-(function(){
-    var cut = base.getElementsByClassName('card-text');
-    for( var i = 0; i < cut.length; i++ ){
+(()=>{
+    let cut = base.getElementsByClassName('card-text');
+    for( let i = 0; i < cut.length; i++ ){
       if (cut[i].innerText.length>20){
         cut[i].innerText = cut[i].innerText.slice(0,20) + '...';
       }
