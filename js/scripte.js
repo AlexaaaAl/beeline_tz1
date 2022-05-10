@@ -24,6 +24,8 @@ document.querySelectorAll('h5.card-title').forEach(function(el) {
 (function(){
     var cut = document.getElementsByClassName('card-text');
     for( var i = 0; i < cut.length; i++ ){
-      cut[i].innerText = cut[i].innerText.slice(0,20) + '...';
+      if (cut[i].innerText.length>20){
+        cut[i].innerText = cut[i].innerText.slice(0,20) + '...';
+      }
     }
   })();
