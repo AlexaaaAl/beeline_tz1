@@ -15,14 +15,21 @@ $mainmenu.fadeOut().delay(500).fadeIn();
 });
 });
 
-/*Преобразовать каждую строку в верхний регистр.*/
-document.querySelectorAll('h5.card-title').forEach(function(el) {
+
+
+
+/*Преобразовать каждую строку в верхний регистр.
+1 вариант нахождения всех заголовков внутри базового уровня*/
+document.querySelectorAll('.base h5.card-title').forEach(function(el) {
     el.innerHTML =  el.innerHTML.toUpperCase();
   });
 
+/*вариант 2 нахождения всех заголовков внутри базового уровня*/
+let base = document.querySelector('section.base');
+
 /*Обрезать строку до 20 символов, и в конце вывести "..." (три точки). */
 (function(){
-    var cut = document.getElementsByClassName('card-text');
+    var cut = base.getElementsByClassName('card-text');
     for( var i = 0; i < cut.length; i++ ){
       if (cut[i].innerText.length>20){
         cut[i].innerText = cut[i].innerText.slice(0,20) + '...';
