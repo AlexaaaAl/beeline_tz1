@@ -36,3 +36,6 @@ const base = document.querySelector('section.base');
       }
     }
   })();
+  /*проверка ветви hw-7
+*/
+function(){};
