@@ -1,14 +1,22 @@
 $(document).ready( function() {
   let $submenu = $('.submenu');
   let $mainmenu = $('.mainmenu');
+  let Arrow=document.getElementById("arrow");
   $submenu.hide();
   $submenu.first().delay(400).slideDown(700);
+  //нажатие на пункты подменю (js,git и т.д.)
   $submenu.on('click','li', function() {
-    $submenu.siblings().find('li').removeClass('chosen');
-    $(this).addClass('chosen');
+    if ($submenu.children().hasClass("chosen")){
+    $(this).removeClass('chosen');
+    }else $(this).addClass('chosen');
   });
+  //нажатие на пункты меню 
   $mainmenu.on('click', 'li', function() {
-  $(this).next('.submenu').slideToggle().siblings('.submenu').slideUp();
+    $(this).next('.submenu').slideToggle().siblings('.submenu').slideUp();
+    if (!Arrow.hasAttribute("transform")) { 
+      Arrow.setAttribute("transform", "rotate(180)");
+    }else Arrow.removeAttribute("transform");
+  
   });
   $mainmenu.children('li:last-child').on('click', function() {
    $mainmenu.fadeOut().delay(500).fadeIn();
