@@ -405,7 +405,15 @@ flex-wrap: nowrap;
 justify-content: space-between;
 }
 
-//ьфштьутг
+//
+.dd-menu{
+	width: 300px;
+	display: none;
+}
+.knop{
+	height:48px;
+}
+
 .mainmenu {
     margin: 90px auto;
     font-size: 16px;
@@ -413,20 +421,17 @@ justify-content: space-between;
     padding: 0;
     }
      
-    .mainmenu > li {
+.mainmenu > li {
 
     }
+.mainmenu > li:last-child { border-radius: 0 0 7px 7px; }
      
-   
-     
-    .mainmenu > li:last-child { border-radius: 0 0 7px 7px; }
-     
-    .mainmenu > li span {
+.mainmenu > li span {
     display: block;
     line-height: 48px;
     }
      
-    .mainmenu > li .icon {
+.mainmenu > li .icon {
     padding: 14px 20px 0 20px;
     float: left;
     width: 20px;
@@ -475,7 +480,8 @@ justify-content: space-between;
 
     }
          
-    .submenu .chosen, .submenu .chosen:hover {     border-left: solid 3px#6F6EFF; 
+    .submenu .chosen, .submenu .chosen:hover {     
+        border-left: solid 3px#6F6EFF; 
         background-color: rgba(255, 255, 255, 0.274);
         .icon{
             filter: grayscale(0%);
@@ -483,5 +489,10 @@ justify-content: space-between;
     }
          
     .submenu li:hover { border-left: solid 6px #6F6EFF; }
+    .submenu li:active{ border-left: solid 3px#6F6EFF; 
+        background-color: rgba(255, 255, 255, 0.274);
+        .icon{
+            filter: grayscale(0%);
+        }}
          
     .submenu li span { margin-left: 30px; }

@@ -1,28 +1,49 @@
-$(document).ready( function() {
+/*$(document).ready( function() {
   let $submenu = $('.submenu');
   let $mainmenu = $('.mainmenu');
   let Arrow=document.getElementById("arrow");
   $submenu.hide();
   $submenu.first().delay(400).slideDown(700);
-  //нажатие на пункты подменю (js,git и т.д.)
-  $submenu.on('click','li', function() {
-    if ($submenu.children().hasClass("chosen")){
-    $(this).removeClass('chosen');
-    }else $(this).addClass('chosen');
-  });
+  Arrow.setAttribute("transform", "rotate(180)");
+
   //нажатие на пункты меню 
   $mainmenu.on('click', 'li', function() {
     $(this).next('.submenu').slideToggle().siblings('.submenu').slideUp();
-    if (!Arrow.hasAttribute("transform")) { 
-      Arrow.setAttribute("transform", "rotate(180)");
-    }else Arrow.removeAttribute("transform");
+    if (!($(this).next('#arrow').hasAttribute("transform"))) { 
+      $(this).next('#arrow').setAttribute("transform", "rotate(180)");
+    }else $(this).next('#arrow').removeAttribute("transform");
   
   });
   $mainmenu.children('li:last-child').on('click', function() {
    $mainmenu.fadeOut().delay(500).fadeIn();
   });
 });
+*/
 
+
+const res = $(".dd-menu");
+$('[rel^="m"]').on("click", menu);
+
+$(document).click((e)=> {
+  if ($(e.target).closest(res).length || $(e.target).closest('.knop').length) return;
+  res.fadeOut(400);
+  // e.stopPropagation();
+});
+
+function menu(){
+  let link = $(this).attr('rel'),
+      el = $('.dd-menu.'+link),
+      sv=$('.dd-svg.'+link);
+  if(el.css("display") == "none"){
+    res.hide();
+    el.fadeIn(400);
+    sv.attr("transform", "rotate(180)");
+  }
+  else{
+    el.fadeOut(400);
+    sv.removeAttr("transform");
+  }
+}
 
 
 
