@@ -98,7 +98,7 @@ main {
 
 .lt, .gt {
   background-color: rgba(59, 60, 73, 0.01);
-  border: 2px solid #3b3c49;
+  border: 2px solid rgb(59, 60, 73);
   color: white;
   text-align: center;
   text-decoration: none;
@@ -207,7 +207,7 @@ hr {
 
 .logo_l {
   width: 138px;
-  color: #ffff;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,7 +243,7 @@ hr {
   gap: 10px;
 }
 .account .task {
-  background: #3b3c49;
+  background: rgb(59, 60, 73);
   /* Цвет фона */
   color: #fff;
   /* Цвет текста */
@@ -384,7 +384,7 @@ hr {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #cccccc1f;
+  background-color: rgba(204, 204, 204, 0.1215686275);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -402,7 +402,7 @@ hr {
 }
 
 input:checked + .slider {
-  background-color: #2196f300;
+  background-color: rgba(33, 150, 243, 0);
   border: 1px solid #D8D8D8;
 }
 
@@ -441,7 +441,7 @@ input:checked + .slider:before {
 }
 
 .card {
-  background-color: #373846;
+  background-color: rgb(55, 56, 70);
   color: #fff;
 }
 
@@ -601,4 +601,24 @@ input:checked + .slider:before {
 
 .submenu li span {
   margin-left: 30px;
+}
+
+.show {
+  display: inline-block;
+  opacity: 1;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+.overlay {
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear, visibility 1s linear;
+  transition: opacity 1s linear, visibility 1s linear;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
 }

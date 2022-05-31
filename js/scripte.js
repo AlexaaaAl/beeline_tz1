@@ -21,6 +21,40 @@
 */
 
 
+const res = document.querySelector(".dd-menu");
+document.querySelector('[rel^="m"]').addEventListener("click", menu);
+
+document.addEventListener('click', (e) => {
+  if ($(e.target).closest(res).length || $(e.target).closest('.knop').length) return;
+  res.fadeOut(400);
+  // e.stopPropagation();
+});
+
+function menu(){
+  let link =this.getAttribute('rel'),
+      el = document.querySelector('.dd-menu.'+link),
+      sv=document.querySelector('.dd-svg.'+link);
+  //if(el.style.display  == "none"){
+  if (!el.classList.contains('show')){
+    //res.hidden = false;
+    //el.style.display = 'inline-block';
+    el.classList.add('show');
+    setTimeout(() => {el.style.opacity = 1;}, 1);
+    //el.fadeIn(400);
+    sv.setAttribute("transform", "rotate(180)");
+  }
+  else{
+    //res.hidden = true;
+    el.style.display = 'none';
+    el.style.opacity = 0;
+    setTimeout(() => {el.classList.remove('show')}, 200);
+    sv.removeAttribute("transform");
+    //el.fadeOut(400);
+    //sv.removeAttr("transform");
+  }
+}
+
+/* //jqery
 const res = $(".dd-menu");
 $('[rel^="m"]').on("click", menu);
 
@@ -44,7 +78,7 @@ function menu(){
     sv.removeAttr("transform");
   }
 }
-
+*/
 
 
 /*Преобразовать каждую строку в верхний регистр.
