@@ -104,3 +104,58 @@ const base = document.querySelector('section.base');
   })();
   /*проверка ветви hw-7
 */
+
+
+//все лекции hw-8
+let html=document.querySelectorAll("[data-type='html']"),
+    css=document.querySelectorAll("[data-type='css']"),
+    js=document.querySelectorAll("[data-type='js']"),
+    allDT=document.querySelectorAll("[data-type]"),
+    all_lecDt="",
+    all_html="",
+    all_js="",
+    all_css="";
+let lectLen=allDT.length ;
+
+for (let elem of html) {
+  //alert(elem.innerHTML);
+  all_html+= "<div class='card' style='width: 18rem;'>"+elem.innerHTML+"</div>"; 
+}
+for (let elem of allDT) {
+  //alert(elem.innerHTML);
+  all_lecDt+= "<div class='card' style='width: 18rem;'>"+elem.innerHTML+"</div>"; 
+}
+for (let elem of css) {
+  //alert(elem.innerHTML);
+  all_css+= "<div class='card' style='width: 18rem;'>"+elem.innerHTML+"</div>"; 
+}
+for (let elem of js) {
+  //alert(elem.innerHTML);
+  all_js+= "<div class='card' style='width: 18rem;'>"+elem.innerHTML+"</div>"; 
+}
+document.getElementById("lec_content").innerHTML = all_lecDt; 
+
+
+document.getElementById("lec").innerHTML =""+lectLen+ " лекций"; 
+
+let button = document.getElementById('lec'),
+    buttonhtml = document.getElementById('all_html'),
+    buttoncss = document.getElementById('all_css'),
+    buttonjs = document.getElementById('all_js');
+
+button.addEventListener('click', function() {
+  document.getElementById("lec_content").innerHTML = ""; 
+  document.getElementById("lec_content").innerHTML = all_lecDt;  
+});
+buttonhtml.addEventListener('click', function() {
+  document.getElementById("lec_content").innerHTML = ""; 
+  document.getElementById("lec_content").innerHTML = all_html;  
+});
+buttoncss.addEventListener('click', function() {
+  document.getElementById("lec_content").innerHTML = ""; 
+  document.getElementById("lec_content").innerHTML = all_css;  
+});
+buttonjs.addEventListener('click', function() {
+  document.getElementById("lec_content").innerHTML = ""; 
+  document.getElementById("lec_content").innerHTML = all_js;  
+});

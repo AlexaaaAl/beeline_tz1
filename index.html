@@ -108,6 +108,25 @@
         
     </header>
     <main>
+      <section class="weekly_quests pro_pluse">
+        <div class="quest_head">
+            <h4>Все лекции на нашем сайте</h4>
+            <h2>ALL LECTURES</h2>
+        </div>
+        <div class="togle">
+            <div class="lection">
+              <button class="all_bt " id="all_html">HTML</button>
+              <button class="all_bt " id="all_css">CSS</button>
+              <button class="all_bt " id="all_js">JavaScript</button>
+              <button class="all_bt " id="lec"></button>
+              <button class="lt">&lt;</button>
+              <button class="gt">&gt;</button>
+            </div>
+        </div>
+        <div class="quest_card" id="lec_content">
+
+        </div>
+      </section>
         <section class="weekly_quests base">
             <div class="quest_head">
                 <h4>Базовый уровень</h4>
@@ -122,7 +141,7 @@
             </div>
             <div class="quest_card">
                 
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-type="html" style="width: 18rem;">
                     <img src="img/img.png" class="card-img-top" alt="...">
                     <div class="card-img-overlay">
                         <button class="all_bt lecs">Лекция</button>
@@ -137,7 +156,7 @@
                       <button class="all_bt look">Смотреть</button>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-type="css" style="width: 18rem;">
                     <img src="img/img1.png" class="card-img-top" alt="...">
                     <div class="card-img-overlay">
                         <button class="all_bt lecs">Лекция</button>
@@ -152,7 +171,7 @@
                       <button class="all_bt look">Смотреть</button>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-type="css" style="width: 18rem;">
                     <img src="img/img2.png" class="card-img-top" alt="...">
                     <div class="card-img-overlay">
                         <button class="all_bt lecs">Лекция</button>
@@ -167,7 +186,7 @@
                       <button class="all_bt look">Смотреть</button>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-type="css" style="width: 18rem;">
                     <img src="img/img3.png" class="card-img-top" alt="...">
                     <div class="card-img-overlay">
                         <button class="all_bt lecs">Лекция</button>
@@ -189,7 +208,7 @@
         <section class="weekly_quests pro">
           <div class="quest_head">
               <h4>Продвинутый уровень</h4>
-              <h2>Js</h2>
+              <h2>HTML/CSS</h2>
           </div>
           <div class="togle">
               <div class="lection">
@@ -200,7 +219,7 @@
           </div>
           <div class="quest_card">
               
-              <div class="card" style="width: 18rem;">
+              <div class="card" data-type="html" style="width: 18rem;">
                   <img src="img/img.png" class="card-img-top" alt="...">
                   <div class="card-img-overlay">
                       <button class="all_bt lecs">Лекция</button>
@@ -215,7 +234,7 @@
                     <button class="all_bt look">Смотреть</button>
                   </div>
               </div>
-              <div class="card" style="width: 18rem;">
+              <div class="card" data-type="css" style="width: 18rem;">
                   <img src="img/img1.png" class="card-img-top" alt="...">
                   <div class="card-img-overlay">
                       <button class="all_bt lecs">Лекция</button>
@@ -230,7 +249,7 @@
                     <button class="all_bt look">Смотреть</button>
                   </div>
               </div>
-              <div class="card" style="width: 18rem;">
+              <div class="card" data-type="html" style="width: 18rem;">
                   <img src="img/img2.png" class="card-img-top" alt="...">
                   <div class="card-img-overlay">
                       <button class="all_bt lecs">Лекция</button>
@@ -245,7 +264,7 @@
                     <button class="all_bt look">Смотреть</button>
                   </div>
               </div>
-              <div class="card" style="width: 18rem;">
+              <div class="card" data-type="css" style="width: 18rem;">
                   <img src="img/img3.png" class="card-img-top" alt="...">
                   <div class="card-img-overlay">
                       <button class="all_bt lecs">Лекция</button>
@@ -266,7 +285,7 @@
       <section class="weekly_quests pro_pluse">
         <div class="quest_head">
             <h4>Продвинутый уровень</h4>
-            <h2>React</h2>
+            <h2>Js/React</h2>
         </div>
         <div class="togle">
             <div class="lection">
@@ -277,13 +296,13 @@
         </div>
         <div class="quest_card">
             
-            <div class="card" style="width: 18rem;">
+            <div class="card" data-type="js" style="width: 18rem;">
                 <img src="img/img.png" class="card-img-top" alt="...">
                 <div class="card-img-overlay">
                     <button class="all_bt lecs">Лекция</button>
                   </div>
                 <div class="card-body">
-                  <h5 class="card-title">Структура HTML</h5>
+                  <h5 class="card-title">JavaScript</h5>
                   <p class="card-text"><span>Назначение блоков: head, body</span></p>
                 </div>
             
@@ -292,13 +311,13 @@
                   <button class="all_bt look">Смотреть</button>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card" data-type="js" style="width: 18rem;">
                 <img src="img/img1.png" class="card-img-top" alt="...">
                 <div class="card-img-overlay">
                     <button class="all_bt lecs">Лекция</button>
                   </div>
                 <div class="card-body">
-                  <h5 class="card-title">Подключение стилей</h5>
+                  <h5 class="card-title">JavaScript</h5>
                   <p class="card-text"><span>Виды подключения стилей. Подключение шрифтов</span></p>
                 </div>
             
@@ -307,13 +326,13 @@
                   <button class="all_bt look">Смотреть</button>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card" data-type="js" style="width: 18rem;">
                 <img src="img/img2.png" class="card-img-top" alt="...">
                 <div class="card-img-overlay">
                     <button class="all_bt lecs">Лекция</button>
                   </div>
                 <div class="card-body">
-                  <h5 class="card-title">CSS</h5>
+                  <h5 class="card-title">React</h5>
                   <p class="card-text"><span>Базовый синтаксис CSS: селекторы, классы</span></p>
                 </div>
             
@@ -322,13 +341,13 @@
                   <button class="all_bt look">Смотреть</button>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card" data-type="js" style="width: 18rem;">
                 <img src="img/img3.png" class="card-img-top" alt="...">
                 <div class="card-img-overlay">
                     <button class="all_bt lecs">Лекция</button>
                   </div>
                 <div class="card-body">
-                  <h5 class="card-title">Наследие и каскад</h5>
+                  <h5 class="card-title">React</h5>
                   <p class="card-text"><span>Наследие и каскад</span></p>
                 </div>
             
