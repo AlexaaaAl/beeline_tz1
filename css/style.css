@@ -613,14 +613,18 @@ input:checked + .slider:before {
 .show {
   display: inline-block;
   opacity: 1;
-  -webkit-transition: opacity 1s linear;
-  transition: opacity 1s linear;
+  max-height: 330px;
+  -webkit-transition: max-height 1s cubic-bezier(0, 1, 0, 1), opacity 1s linear;
+  transition: max-height 1s cubic-bezier(0, 1, 0, 1), opacity 1s linear;
 }
 
 .overlay {
   display: inline-block;
   visibility: hidden;
   opacity: 0;
+  max-height: 0;
+  -webkit-transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+  transition: max-height 1s cubic-bezier(0, 1, 0, 1);
   -webkit-transition: opacity 1s linear, visibility 1s linear;
   transition: opacity 1s linear, visibility 1s linear;
 }

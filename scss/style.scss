@@ -508,13 +508,17 @@ justify-content: space-between;
     .show {
        display: inline-block;
         opacity: 1;
-        transition: opacity 1s linear;
+        
+        max-height: 330px;
+        transition: max-height 1s cubic-bezier(0, 1, 0, 1), opacity 1s linear;
     }
 
     .overlay {
         display: inline-block;
         visibility: hidden;
         opacity: 0;
+        max-height: 0;
+        transition: max-height 1s cubic-bezier(0, 1, 0, 1);
         transition: opacity 1s linear, visibility 1s linear;
 
       }
