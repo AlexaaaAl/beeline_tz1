@@ -1,25 +1,28 @@
+
 //hw-7
 
 
 function dd_menu(but_id){
   let link_el = document.querySelector('.dd-menu.'+but_id),
-      link_svg=document.querySelector('.dd-svg.'+but_id);
-  
-  if (!link_el.classList.contains('show')){    /**/
-    link_el.classList.add('show');
-    setTimeout(() => { link_el.style.opacity = 1;}, 1000);
-    link_svg.removeAttribute("transform");
-    
+      link_svg=document.querySelector('.dd-svg.'+but_id);  
+    if (!link_el.classList.contains('show')){    /**/
+      link_el.classList.add('show');
+      setTimeout(() => { link_el.style.opacity = 1;}, 1000);
+      link_svg.removeAttribute("transform");
+    }
+    else{
+      link_el.style.opacity = 0;
+      setTimeout(() => {link_el.classList.remove('show')}, 200);
+      link_svg.removeAttribute("transform");
+      link_el.style.opacity = 0;
+      setTimeout(() => { link_el.classList.remove('show')}, 200);
+      link_svg.setAttribute("transform", "rotate(180)");
+    }
   }
-  else{
-    link_el.style.opacity = 0;
-    setTimeout(() => { link_el.classList.remove('show')}, 200);
-    link_svg.setAttribute("transform", "rotate(180)");
-  }
-}
+
+
 
 //end hw-7
-
 
 
 
@@ -46,55 +49,28 @@ const base = document.querySelector('section.base');
 
 
 //все лекции hw-8
-let html=document.querySelectorAll("[data-type='html']"),
-    css=document.querySelectorAll("[data-type='css']"),
-    js=document.querySelectorAll("[data-type='js']"),
-    allDT=document.querySelectorAll("[data-type]"),
-    all_lecDt="",
-    all_html="",
-    all_js="",
-    all_css="";
-let lectLen=allDT.length ;
-
-for (let elem of html) {
-  //alert(elem.innerHTML);
-  all_html+= "<div class='card' style='width: 18rem;'>"+elem.innerHTML+"</div>"; 
-}
-for (let elem of allDT) {
-  //alert(elem.innerHTML);
-  all_lecDt+= "<div class='card' style='width: 18rem;'>"+elem.innerHTML+"</div>"; 
-}
-for (let elem of css) {
-  //alert(elem.innerHTML);
-  all_css+= "<div class='card' style='width: 18rem;'>"+elem.innerHTML+"</div>"; 
-}
-for (let elem of js) {
-  //alert(elem.innerHTML);
-  all_js+= "<div class='card' style='width: 18rem;'>"+elem.innerHTML+"</div>"; 
-}
-document.getElementById("lec_content").innerHTML = all_lecDt; 
-
-
-document.getElementById("lec").innerHTML =""+lectLen+ " лекций"; 
-
-let button = document.getElementById('lec'),
-    buttonhtml = document.getElementById('all_html'),
-    buttoncss = document.getElementById('all_css'),
-    buttonjs = document.getElementById('all_js');
-
-button.addEventListener('click', function() {
-  document.getElementById("lec_content").innerHTML = ""; 
-  document.getElementById("lec_content").innerHTML = all_lecDt;  
-});
-buttonhtml.addEventListener('click', function() {
-  document.getElementById("lec_content").innerHTML = ""; 
-  document.getElementById("lec_content").innerHTML = all_html;  
-});
-buttoncss.addEventListener('click', function() {
-  document.getElementById("lec_content").innerHTML = ""; 
-  document.getElementById("lec_content").innerHTML = all_css;  
-});
-buttonjs.addEventListener('click', function() {
-  document.getElementById("lec_content").innerHTML = ""; 
-  document.getElementById("lec_content").innerHTML = all_js;  
-});
+let allDT="";
+  const load = () => {
+    document.getElementById("lec").innerHTML =""+document.querySelectorAll("[data-type]").length + " лекций"; 
+  }
+  window.onload = load;
+  function lec_click(but)
+  {
+  let id = but.id;
+  let parent = document.getElementById("lec_content");
+  parent.innerHTML="";
+  if (id!="lec"){
+    allDT=document.querySelectorAll(`[data-type='${id}']`);
+    for (var i in allDT) {
+      let lec_child= allDT[i].cloneNode(true);
+      parent.appendChild(lec_child);
+    }
+  }else{
+    allDT=document.querySelectorAll(`[data-type]`);
+    for (var i in allDT) {
+      let lec_child= allDT[i].cloneNode(true);
+      parent.appendChild(lec_child);
+    }
+  }
+  }
+ 
