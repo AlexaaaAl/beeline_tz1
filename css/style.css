@@ -614,8 +614,9 @@ input:checked + .slider:before {
   display: inline-block;
   opacity: 1;
   max-height: 330px;
-  -webkit-transition: max-height 1s cubic-bezier(0, 1, 0, 1), opacity 1s linear;
-  transition: max-height 1s cubic-bezier(0, 1, 0, 1), opacity 1s linear;
+  /*transition: all 1s ease-in;*/
+  -webkit-transition: max-height 0.7s linear, opacity 1s linear;
+  transition: max-height 0.7s linear, opacity 1s linear;
 }
 
 .overlay {
@@ -623,10 +624,8 @@ input:checked + .slider:before {
   visibility: hidden;
   opacity: 0;
   max-height: 0;
-  -webkit-transition: max-height 1s cubic-bezier(0, 1, 0, 1);
-  transition: max-height 1s cubic-bezier(0, 1, 0, 1);
-  -webkit-transition: opacity 1s linear, visibility 1s linear;
-  transition: opacity 1s linear, visibility 1s linear;
+  -webkit-transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 1s linear, visibility 1s linear;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 1s linear, visibility 1s linear;
 }
 
 .overlay.show {

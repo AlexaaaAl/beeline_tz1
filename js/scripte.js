@@ -7,14 +7,9 @@ function dd_menu(but_id){
       link_svg=document.querySelector('.dd-svg.'+but_id);  
     if (!link_el.classList.contains('show')){    /**/
       link_el.classList.add('show');
-      setTimeout(() => { link_el.style.opacity = 1;}, 1000);
       link_svg.removeAttribute("transform");
     }
     else{
-      link_el.style.opacity = 0;
-      setTimeout(() => {link_el.classList.remove('show')}, 200);
-      link_svg.removeAttribute("transform");
-      link_el.style.opacity = 0;
       setTimeout(() => { link_el.classList.remove('show')}, 200);
       link_svg.setAttribute("transform", "rotate(180)");
     }
