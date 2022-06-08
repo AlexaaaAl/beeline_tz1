@@ -55,42 +55,41 @@
            
             <div class="games">
               <ul class="mainmenu games_nav">
-                    <div class="dropdown">    
-                      <div class="new-knop">
-                        <div rel='m1' class="knop k1 games_li">Программа 
-                          <svg class="dd-svg m1" id="arrow" width="10" height="18" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1.17021 6L5.16039 2.1676L8.91338 5.77219L10 4.72854L5.0768 0L0 4.87606L1.17021 6V6Z" fill="white"/>
-                          </svg></div>
-                         <ul class="dd-menu m1 submenu games_nav2" >
-                          <li><a href="/"><img src="img/svg/html_css.svg" alt="User icon" class="icon"><span>HTML/CSS</span></a></li>
-                          <li><a href="/"><img src="img/svg/git.svg" alt="User icon" class="icon"><span>GIT</span></a></li>
-                          <li><a href="/"><img src="img/svg/js.svg" alt="User icon" class="icon"><span>JavaScript</span></a></li> 
-                          <li><a href="/"><img src="img/svg/react.svg" alt="User icon" class="icon"><span>React</span></a></li>
-                          <li><a href="/"></a><img src="img/svg/angular.svg" alt="User icon" class="icon"><span>Angular</span></a></li>
-                          <li><a href="/"><img src="img/svg/data.svg" alt="User icon" class="icon"><span>Data</span></a></li>    
-                        </ul>    
-                        <div rel='m2' class="knop k2 games_li">Менторы</div>
-                        <ul class="dd-menu m2">
-                               
-                      </ul>
-                          <div rel='m3' class="knop k3 games_li">Лекции</div>
-                      </div> 
-                      <ul class="dd-menu m4">
-                          
-                      </ul>
-                      <div rel='m4' class="knop k3 games_li">Правила поступления</div>
-                      <ul class="dd-menu m3">
-                          
-                      </ul>
-                      <div rel='m5' class="knop k3 games_li">Обратная связь</div>
-                      <ul class="dd-menu m5">
-                          
-                      </ul>
-                      
-                     
-                      
-                    </div>
-              </ul>
+                <div class="dropdown">    
+                  
+                  <button id='m1' class="knop k1 games_li" onClick="dd_menu(this.id)">Программа 
+                    <svg class="dd-svg m1" id="arrow" width="10" height="18" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+                    <path d="M1.17021 6L5.16039 2.1676L8.91338 5.77219L10 4.72854L5.0768 0L0 4.87606L1.17021 6V6Z" fill="white"/>
+                    </svg>
+                  </button>
+                  <ul class="dd-menu m1 submenu games_nav2">
+                    <li><a href="/"><img src="img/svg/html_css.svg" alt="User icon" class="icon"><span>HTML/CSS</span></a></li>
+                    <li><a href="/"><img src="img/svg/git.svg" alt="User icon" class="icon"><span>GIT</span></a></li>
+                    <li><a href="/"><img src="img/svg/js.svg" alt="User icon" class="icon"><span>JavaScript</span></a></li> 
+                    <li><a href="/"><img src="img/svg/react.svg" alt="User icon" class="icon"><span>React</span></a></li>
+                    <li><a href="/"></a><img src="img/svg/angular.svg" alt="User icon" class="icon"><span>Angular</span></a></li>
+                    <li><a href="/"><img src="img/svg/data.svg" alt="User icon" class="icon"><span>Data</span></a></li>    
+                  </ul>    
+                  <button id='m2' class="knop k2 games_li" onClick="dd_menu(this.id)">Менторы</button >
+                  <ul class="dd-menu m2">       
+                  </ul>
+                  <button  id='m3' class="knop k3 games_li" onClick="dd_menu(this.id)">Лекции</button >
+                    <ul class="dd-menu m4">   
+                    </ul>
+                    <button  id='m4' class="knop k4 games_li" onClick="dd_menu(this.id)">Правила поступления</button >
+                    <ul class="dd-menu m3">
+                        
+                    </ul>
+                    <button  id='m5' class="knop k5 games_li" onClick="dd_menu(this.id)">Обратная связь</button >
+                    <ul class="dd-menu m5">
+                        
+                    </ul>
+                    
+                   
+                    
+                  </div>
+            </ul>
+                    
             </div>
             
             <div class="switcher">
@@ -142,62 +141,62 @@
             <div class="quest_card">
                 
                 <div class="card" data-type="html" style="width: 18rem;">
-                    <img src="img/img.png" class="card-img-top" alt="...">
+                    <img src="img/img.png" class="card-img-top" alt="..." data-image>
                     <div class="card-img-overlay">
-                        <button class="all_bt lecs">Лекция</button>
+                        <button class="all_bt lecs" data-label>Лекция</button>
                       </div>
                     <div class="card-body">
-                      <h5 class="card-title">Структура HTML</h5>
-                      <p class="card-text"><span>Назначение блоков: head, body</span></p>
+                     <h5 class="card-title" data-title>Структура HTML</h5>
+                      <p class="card-text" data-desc><span>Назначение блоков: head, body</span></p>
                     </div>
                 
                     <div class="card-footer">
-                      <a href="#" class="card-link">01.02.2020</a>
+                      <a href="#" class="card-link" data-date>01.02.2020</a>
                       <button class="all_bt look">Смотреть</button>
                     </div>
                 </div>
                 <div class="card" data-type="css" style="width: 18rem;">
-                    <img src="img/img1.png" class="card-img-top" alt="...">
+                    <img src="img/img1.png" class="card-img-top" alt="..." data-image>
                     <div class="card-img-overlay">
-                        <button class="all_bt lecs">Лекция</button>
+                        <button class="all_bt lecs" data-label>Лекция</button>
                       </div>
                     <div class="card-body">
-                      <h5 class="card-title">Подключение стилей</h5>
-                      <p class="card-text"><span>Виды подключения стилей. Подключение шрифтов</span></p>
+                     <h5 class="card-title" data-title>Подключение стилей</h5>
+                      <p class="card-text" data-desc><span>Виды подключения стилей. Подключение шрифтов</span></p>
                     </div>
                 
                     <div class="card-footer">
-                      <a href="#" class="card-link">01.02.2020</a>
+                      <a href="#" class="card-link" data-date>01.02.2020</a>
                       <button class="all_bt look">Смотреть</button>
                     </div>
                 </div>
                 <div class="card" data-type="css" style="width: 18rem;">
-                    <img src="img/img2.png" class="card-img-top" alt="...">
+                    <img src="img/img2.png" class="card-img-top" alt="..." data-image>
                     <div class="card-img-overlay">
-                        <button class="all_bt lecs">Лекция</button>
+                        <button class="all_bt lecs" data-label>Лекция</button>
                       </div>
                     <div class="card-body">
-                      <h5 class="card-title">CSS</h5>
-                      <p class="card-text"><span>Базовый синтаксис CSS: селекторы, классы</span></p>
+                     <h5 class="card-title" data-title>CSS</h5>
+                      <p class="card-text" data-desc><span>Базовый синтаксис CSS: селекторы, классы</span></p>
                     </div>
                 
                     <div class="card-footer">
-                      <a href="#" class="card-link">01.02.2020</a>
+                      <a href="#" class="card-link" data-date>01.02.2020</a>
                       <button class="all_bt look">Смотреть</button>
                     </div>
                 </div>
                 <div class="card" data-type="css" style="width: 18rem;">
-                    <img src="img/img3.png" class="card-img-top" alt="...">
+                    <img src="img/img3.png" class="card-img-top" alt="..." data-image>
                     <div class="card-img-overlay">
-                        <button class="all_bt lecs">Лекция</button>
+                        <button class="all_bt lecs" data-label>Лекция</button>
                       </div>
                     <div class="card-body">
-                      <h5 class="card-title">Наследие и каскад</h5>
-                      <p class="card-text"><span>Наследие и каскад</span></p>
+                     <h5 class="card-title" data-title>Наследие и каскад</h5>
+                      <p class="card-text" data-desc><span>Наследие и каскад</span></p>
                     </div>
                 
                     <div class="card-footer">
-                      <a href="#" class="card-link">01.02.2020</a>
+                      <a href="#" class="card-link" data-date>01.02.2020</a>
                       <button  class="all_bt look">Смотреть</button>
                     </div>
                 </div>
@@ -220,62 +219,62 @@
           <div class="quest_card">
               
               <div class="card" data-type="html" style="width: 18rem;">
-                  <img src="img/img.png" class="card-img-top" alt="...">
+                  <img src="img/img.png" class="card-img-top" alt="..." data-image>
                   <div class="card-img-overlay">
-                      <button class="all_bt lecs">Лекция</button>
+                      <button class="all_bt lecs" data-label>Лекция</button>
                     </div>
                   <div class="card-body">
-                    <h5 class="card-title">HTML-формы</h5>
-                    <p class="card-text"><span>HTML-формы</span></p>
+                   <h5 class="card-title" data-title>HTML-формы</h5>
+                    <p class="card-text" data-desc><span>HTML-формы</span></p>
                   </div>
               
                   <div class="card-footer">
-                    <a href="#" class="card-link">01.02.2020</a>
+                    <a href="#" class="card-link" data-date>01.02.2020</a>
                     <button class="all_bt look">Смотреть</button>
                   </div>
               </div>
               <div class="card" data-type="css" style="width: 18rem;">
-                  <img src="img/img1.png" class="card-img-top" alt="...">
+                  <img src="img/img1.png" class="card-img-top" alt="..." data-image>
                   <div class="card-img-overlay">
-                      <button class="all_bt lecs">Лекция</button>
+                      <button class="all_bt lecs" data-label>Лекция</button>
                     </div>
                   <div class="card-body">
-                    <h5 class="card-title">Flex</h5>
-                    <p class="card-text"><span>Принципы современнной верстки сайта на flex</span></p>
+                   <h5 class="card-title" data-title>Flex</h5>
+                    <p class="card-text" data-desc><span>Принципы современнной верстки сайта на flex</span></p>
                   </div>
               
                   <div class="card-footer">
-                    <a href="#" class="card-link">01.02.2020</a>
+                    <a href="#" class="card-link" data-date>01.02.2020</a>
                     <button class="all_bt look">Смотреть</button>
                   </div>
               </div>
               <div class="card" data-type="html" style="width: 18rem;">
-                  <img src="img/img2.png" class="card-img-top" alt="...">
+                  <img src="img/img2.png" class="card-img-top" alt="..." data-image>
                   <div class="card-img-overlay">
-                      <button class="all_bt lecs">Лекция</button>
+                      <button class="all_bt lecs" data-label>Лекция</button>
                     </div>
                   <div class="card-body">
-                    <h5 class="card-title">Media и viewport</h5>
-                    <p class="card-text"><span>Адаптивная верстка. Использование media и viewport</span></p>
+                   <h5 class="card-title" data-title>Media и viewport</h5>
+                    <p class="card-text" data-desc><span>Адаптивная верстка. Использование media и viewport</span></p>
                   </div>
               
                   <div class="card-footer">
-                    <a href="#" class="card-link">01.02.2020</a>
+                    <a href="#" class="card-link" data-date>01.02.2020</a>
                     <button class="all_bt look">Смотреть</button>
                   </div>
               </div>
               <div class="card" data-type="css" style="width: 18rem;">
-                  <img src="img/img3.png" class="card-img-top" alt="...">
+                  <img src="img/img3.png" class="card-img-top" alt="..." data-image>
                   <div class="card-img-overlay">
-                      <button class="all_bt lecs">Лекция</button>
+                      <button class="all_bt lecs" data-label>Лекция</button>
                     </div>
                   <div class="card-body">
-                    <h5 class="card-title">CSS Grid</h5>
-                    <p class="card-text"><span>CSS Grid</span></p>
+                   <h5 class="card-title" data-title>CSS Grid</h5>
+                    <p class="card-text" data-desc><span>CSS Grid</span></p>
                   </div>
               
                   <div class="card-footer">
-                    <a href="#" class="card-link">01.02.2020</a>
+                    <a href="#" class="card-link" data-date>01.02.2020</a>
                     <button  class="all_bt look">Смотреть</button>
                   </div>
               </div>
@@ -297,62 +296,62 @@
         <div class="quest_card">
             
             <div class="card" data-type="js" style="width: 18rem;">
-                <img src="img/img.png" class="card-img-top" alt="...">
+                <img src="img/img.png" class="card-img-top" alt="..." data-image>
                 <div class="card-img-overlay">
-                    <button class="all_bt lecs">Лекция</button>
+                    <button class="all_bt lecs" data-label>Лекция</button>
                   </div>
                 <div class="card-body">
-                  <h5 class="card-title">JavaScript</h5>
-                  <p class="card-text"><span>Назначение блоков: head, body</span></p>
+                 <h5 class="card-title" data-title>JavaScript</h5>
+                  <p class="card-text" data-desc><span>Назначение блоков: head, body</span></p>
                 </div>
             
                 <div class="card-footer">
-                  <a href="#" class="card-link">01.02.2020</a>
+                  <a href="#" class="card-link" data-date>01.02.2020</a>
                   <button class="all_bt look">Смотреть</button>
                 </div>
             </div>
             <div class="card" data-type="js" style="width: 18rem;">
-                <img src="img/img1.png" class="card-img-top" alt="...">
+                <img src="img/img1.png" class="card-img-top" alt="..." data-image>
                 <div class="card-img-overlay">
-                    <button class="all_bt lecs">Лекция</button>
+                    <button class="all_bt lecs" data-label>Лекция</button>
                   </div>
                 <div class="card-body">
-                  <h5 class="card-title">JavaScript</h5>
-                  <p class="card-text"><span>Виды подключения стилей. Подключение шрифтов</span></p>
+                 <h5 class="card-title" data-title>JavaScript</h5>
+                  <p class="card-text" data-desc><span>Виды подключения стилей. Подключение шрифтов</span></p>
                 </div>
             
                 <div class="card-footer">
-                  <a href="#" class="card-link">01.02.2020</a>
+                  <a href="#" class="card-link" data-date>01.02.2020</a>
                   <button class="all_bt look">Смотреть</button>
                 </div>
             </div>
             <div class="card" data-type="js" style="width: 18rem;">
-                <img src="img/img2.png" class="card-img-top" alt="...">
+                <img src="img/img2.png" class="card-img-top" alt="..." data-image>
                 <div class="card-img-overlay">
-                    <button class="all_bt lecs">Лекция</button>
+                    <button class="all_bt lecs" data-label>Лекция</button>
                   </div>
                 <div class="card-body">
-                  <h5 class="card-title">React</h5>
-                  <p class="card-text"><span>Базовый синтаксис CSS: селекторы, классы</span></p>
+                 <h5 class="card-title" data-title>React</h5>
+                  <p class="card-text" data-desc><span>Базовый синтаксис CSS: селекторы, классы</span></p>
                 </div>
             
                 <div class="card-footer">
-                  <a href="#" class="card-link">01.02.2020</a>
+                  <a href="#" class="card-link" data-date>01.02.2020</a>
                   <button class="all_bt look">Смотреть</button>
                 </div>
             </div>
             <div class="card" data-type="js" style="width: 18rem;">
-                <img src="img/img3.png" class="card-img-top" alt="...">
+                <img src="img/img3.png" class="card-img-top" alt="..." data-image>
                 <div class="card-img-overlay">
-                    <button class="all_bt lecs">Лекция</button>
+                    <button class="all_bt lecs" data-label>Лекция</button>
                   </div>
                 <div class="card-body">
-                  <h5 class="card-title">React</h5>
-                  <p class="card-text"><span>Наследие и каскад</span></p>
+                 <h5 class="card-title" data-title>React</h5>
+                  <p class="card-text" data-desc><span>Наследие и каскад</span></p>
                 </div>
             
                 <div class="card-footer">
-                  <a href="#" class="card-link">01.02.2020</a>
+                  <a href="#" class="card-link" data-date>01.02.2020</a>
                   <button  class="all_bt look">Смотреть</button>
                 </div>
             </div>

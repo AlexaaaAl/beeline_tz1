@@ -1,66 +1,23 @@
-
 //hw-7
-const res = document.querySelector(".dd-menu");
-document.querySelector('[rel^="m"]').addEventListener("click", menu);
-/*
-document.addEventListener('click', (e) => {
-  if ($(e.target).closest(res).length || $(e.target).closest('.knop').length) return;
-  res.fadeOut(400);
-  // e.stopPropagation();
-});*/
 
-function menu(){
-  let link =this.getAttribute('rel'),
-      el = document.querySelector('.dd-menu.'+link),
-      sv=document.querySelector('.dd-svg.'+link);
-  
-  if (!el.classList.contains('show')){
-    /*if(el.style.display  == "none"){
-    res.hidden = false;
-    el.style.display = 'inline-block';*/
-    el.classList.add('show');
-    setTimeout(() => {el.style.opacity = 1;}, 1);
-    sv.setAttribute("transform", "rotate(180)");
+
+function dd_menu(but_id){
+  let link_el = document.querySelector('.dd-menu.'+but_id),
+      link_svg=document.querySelector('.dd-svg.'+but_id);  
+    if (!link_el.classList.contains('show')){    /**/
+      link_el.classList.add('show');
+      link_svg.removeAttribute("transform");
+    }
+    else{
+      setTimeout(() => { link_el.classList.remove('show')}, 200);
+      link_svg.setAttribute("transform", "rotate(180)");
+    }
   }
-  else{
-    
-    el.style.opacity = 0;
-    setTimeout(() => {el.classList.remove('show')}, 200);
-    sv.removeAttribute("transform");
-    /*res.hidden = true;
-    el.style.display = 'none';
-    sv.removeAttr("transform");*/
-  }
-}
+
+
 
 //end hw-7
 
-
-/* //jqery
-const res = $(".dd-menu");
-$('[rel^="m"]').on("click", menu);
-
-$(document).click((e)=> {
-  if ($(e.target).closest(res).length || $(e.target).closest('.knop').length) return;
-  res.fadeOut(400);
-  // e.stopPropagation();
-});
-
-function menu(){
-  let link = $(this).attr('rel'),
-      el = $('.dd-menu.'+link),
-      sv=$('.dd-svg.'+link);
-  if(el.css("display") == "none"){
-    res.hide();
-    el.fadeIn(400);
-    sv.attr("transform", "rotate(180)");
-  }
-  else{
-    el.fadeOut(400);
-    sv.removeAttr("transform");
-  }
-}
-*/
 
 
 /*Преобразовать каждую строку в верхний регистр.
@@ -86,6 +43,7 @@ const base = document.querySelector('section.base');
 
 
 //все лекции hw-8
+
 let allDT="";
   const load = () => {
     document.getElementById("lec").innerHTML =""+document.querySelectorAll("[data-type]").length + " лекций"; 
@@ -110,4 +68,29 @@ let allDT="";
     }
   }
   }
+
+  // hw-9
+const allLec = [...document.querySelectorAll('[data-type]')].map(element => element.cloneNode(true));
+function getLecObj(lect) {
+  let lecObj = {};
+
+  lect.forEach(lecture => {
+      let lectItem = {
+          "title": lecture.querySelector('[data-title]').textContent, 
+          "description": lecture.querySelector('[data-desc]').textContent, 
+          "date": lecture.querySelector('[data-date]').textContent, 
+          "image": lecture.querySelector('[data-image]').src, 
+          "label": lecture.querySelector('[data-label]').textContent, 
+      }
+      if (lecture.dataset.group in lecObj) {
+          lecObj[lecture.dataset.group].push(lectItem);
+      } else {
+          lecObj[lecture.dataset.group] = [lectItem];
+      }
+  });
+  return lecObj;
+}
+console.log(getLecObj(allLec));
+
+
  
