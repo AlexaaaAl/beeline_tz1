@@ -46,7 +46,7 @@ const base = document.querySelector('section.base');
 
 let allDT="";
   const load = () => {
-    document.getElementById("lec").innerHTML =""+document.querySelectorAll("[data-type]").length + " лекций"; 
+    document.getElementById("lec").innerHTML =""+document.querySelectorAll("[data-group]").length + " лекций"; 
   }
   window.onload = load;
   function lec_click(but)
@@ -55,13 +55,13 @@ let allDT="";
   let parent = document.getElementById("lec_content");
   parent.innerHTML="";
   if (id!="lec"){
-    allDT=document.querySelectorAll(`[data-type='${id}']`);
+    allDT=document.querySelectorAll(`[data-group='${id}']`);
     for (var i in allDT) {
       let lec_child= allDT[i].cloneNode(true);
       parent.appendChild(lec_child);
     }
   }else{
-    allDT=document.querySelectorAll(`[data-type]`);
+    allDT=document.querySelectorAll(`[data-group]`);
     for (var i in allDT) {
       let lec_child= allDT[i].cloneNode(true);
       parent.appendChild(lec_child);
@@ -70,7 +70,7 @@ let allDT="";
   }
 
   // hw-9
-const allLec = [...document.querySelectorAll('[data-type]')].map(element => element.cloneNode(true));
+const allLec = [...document.querySelectorAll('[data-group]')].map(element => element.cloneNode(true));
 function getLecObj(lect) {
   let lecObj = {};
 

@@ -269,17 +269,7 @@ hr{
     border-bottom: 1px solid #979797;
 }
 
-.games_li{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 40px;
-}
+
 .switcher{
     margin-top: 10px;
 }
@@ -411,6 +401,15 @@ justify-content: space-between;
 	display: none;
 }
 .knop{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 40px;
     height: 48px;
     background: rgba(0,0,0,0);
     padding: 0;
