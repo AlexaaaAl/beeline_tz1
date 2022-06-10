@@ -1,8 +1,11 @@
 
 //hw-7
+const menuBtn=document.querySelectorAll('.knop').forEach((el)=> {
+  el.addEventListener('click', dd_menu);
+});
 
-
-function dd_menu(but_id){
+function dd_menu(e){
+  let but_id=e.target.id;
   let link_el = document.querySelector('.dd-menu.'+but_id),
       link_svg=document.querySelector('.dd-svg.'+but_id);  
     if (!link_el.classList.contains('show')){    /**/
