@@ -483,11 +483,13 @@ input:checked + .slider:before {
 }
 
 .dd-menu {
-  width: 300px;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.7s linear;
+  transition: max-height 0.7s linear;
 }
 
-.knop {
+.button_menu {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 1px;
@@ -607,13 +609,11 @@ input:checked + .slider:before {
   margin-left: 30px;
 }
 
-.show {
+.menu-active {
   display: inline-block;
-  opacity: 1;
   max-height: 330px;
-  /*transition: all 1s ease-in;*/
-  -webkit-transition: max-height 0.7s linear, opacity 1s linear;
-  transition: max-height 0.7s linear, opacity 1s linear;
+  -webkit-transition: max-height 0.7s linear;
+  transition: max-height 0.7s linear;
 }
 
 .overlay {

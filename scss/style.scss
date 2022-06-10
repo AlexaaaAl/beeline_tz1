@@ -388,19 +388,20 @@ hr{
     float: right;
 }
 .card-footer{
-        display: flex;
-flex-direction: row;
-align-items: center;
-flex-wrap: nowrap;
-justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 //
 .dd-menu{
-	width: 300px;
-	display: none;
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.7s linear ;
 }
-.knop{
+.button_menu{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 1px;
@@ -504,13 +505,10 @@ justify-content: space-between;
     .submenu li span { margin-left: 30px; }
 
     //для плавного появления 
-    .show {
-       display: inline-block;
-        opacity: 1;
-        
+    .menu-active {
+       display: inline-block; 
         max-height: 330px;
-        /*transition: all 1s ease-in;*/
-        transition:   max-height 0.7s linear , opacity 1s linear;
+        transition:   max-height 0.7s linear ;
     }
 
     .overlay {

@@ -1,21 +1,20 @@
 
 //hw-7
-const menuBtn=document.querySelectorAll('.knop').forEach((el)=> {
+const menuBtn=document.querySelectorAll('.list_menu').forEach((el)=> {
   el.addEventListener('click', dd_menu);
 });
 
 function dd_menu(e){
   let but_id=e.target.id;
-  let link_el = document.querySelector('.dd-menu.'+but_id),
-      link_svg=document.querySelector('.dd-svg.'+but_id);  
-    if (!link_el.classList.contains('show')){    /**/
-      link_el.classList.add('show');
-      link_svg.removeAttribute("transform");
-    }
-    else{
-      setTimeout(() => { link_el.classList.remove('show')}, 200);
-      link_svg.setAttribute("transform", "rotate(180)");
-    }
+  let menu = document.querySelector('.dd-menu.'+but_id);
+      button_svg=document.querySelector('.dd-svg.'+but_id);  
+      menu.classList.toggle('menu-active');
+      if (!menu.classList.contains('menu-active')){    
+        button_svg.removeAttribute("transform");
+      }
+      else{
+        button_svg.setAttribute("transform", "rotate(180)");
+      }
   }
 
 
